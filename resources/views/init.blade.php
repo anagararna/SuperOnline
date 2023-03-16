@@ -36,7 +36,7 @@
     </div>
     <div class="container mx-auto py-4">
         <div class="flex s flex-col items-center">
-          <a href="url1" class="bg-00c6bb hover:bg-d6a329 text-white font-BebasNeue-Regular py-4 px-4 rounded mb-10">Compra<br>online</a>
+          <a href="{{ url('home') }}" class="bg-00c6bb hover:bg-d6a329 text-white font-BebasNeue-Regular py-4 px-4 rounded mb-10">Compra<br>online</a>
           <a href="url2" class="bg-00c6bb hover:bg-d6a329 text-white font-BebasNeue-Regular py-4 px-4 rounded mb-10">Sobre<br>Nosotros</a>
           <a href="url3" class="bg-00c6bb hover:bg-d6a329 text-white font-BebasNeue-Regular py-4 px-4 rounded mb-10">Espacio<br>Coop</a>
         </div>

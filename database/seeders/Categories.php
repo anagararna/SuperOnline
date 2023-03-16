@@ -13,23 +13,23 @@ class Categories extends Seeder
      */
     public function run(): void
     {
-        Category::create([
+        Category::firstOrCreate([
             'name' => 'Poductos Frescos',
         ]);
 
-        Category::create([
+        Category::firstOrCreate([
             'name' => 'Despensa',
         ]);
 
-        Category::create([
+        Category::firstOrCreate([
             'name' => 'Cuidado Personal',
         ]);
 
-        Category::create([
+        Category::firstOrCreate([
             'name' => 'Lácteos y huevos',
         ]);
 
-        Category::create([
+        Category::firstOrCreate([
             'name' => 'Droguería y limpieza',
         ]);
 
