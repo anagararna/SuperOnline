@@ -17,68 +17,68 @@ class SubCategories extends Seeder
 
         foreach ($categories as $category) {
             if ($category->name === 'Poductos Frescos') {
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Frutas',
                 ]);
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Verduras',
                 ]);
                 // Puedes seguir agregando más subcategorías
             }
             elseif ($category->name === 'Despensa') {
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Aperitivos y frutos secos',
                 ]);
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Conservas, aceites y condimentos',
                 ]);
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Pasta, arroz y legumbres',
                 ]);
             }
-            elseif ($category->name === 'Cuidado personal') {
-                Subcategory::create([
+            elseif ($category->name === 'Cuidado Personal') {
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Cuidado del cabello',
                 ]);
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Cuidado corporal',
                 ]);
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Desodorante',
                 ]);
             }
             elseif ($category->name === 'Lácteos y huevos') {
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Leche',
                 ]);
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Huevos',
                 ]);
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Yogures',
                 ]);
             } 
             elseif ($category->name === 'Droguería y limpieza') {
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Cuidado ropa',
                 ]);
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Limpieza hogar',
                 ]);
-                Subcategory::create([
+                Subcategory::firstOrCreate([
                     'category_id' => $category->id,
                     'name' => 'Ambientadores',
                 ]);
