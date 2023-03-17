@@ -12,12 +12,16 @@ Route::get('/', function () {
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/productList', [HomeController::class, 'productList'])->name('productList');
 
+Route::get('/form', function () {
+    return view('layouts.form')->with('layout', 'form');
+})->name('form');
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard',[HomeController::class, 'listadoDash'])->middleware(['auth', 'verified'])->name('dashboard')
+->middleware(['auth', 'verified'])->name('dashboard');
+Route::delete('/dashboard.destroy/{id}', [HomeController::class,'destroy'])->name('dashboard.destroy');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

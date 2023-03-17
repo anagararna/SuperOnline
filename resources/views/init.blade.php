@@ -14,7 +14,7 @@
                 <div class="w-full block flex-grow lg:flex lg:items-right lg:w-auto">
                     <div>
                         @auth
-                            <a href="{{ route('dashboard') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0 ml-2">Espacio personal</a>
+                            <a href="{{ url('dashboard') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0 ml-2">Espacio personal</a>
                         @else
                             <a href="{{ route('register') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0 ml-2">Registrarse</a>
                             <a href="{{ route('login') }}" class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-gray-800 hover:bg-white mt-4 lg:mt-0 ml-2">Iniciar sesión</a>
