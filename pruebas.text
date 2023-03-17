@@ -1,0 +1,22 @@
+function mostrarProductosDeSubcategoria(subcategoria) {
+            this.productos = subcategoria.products;
+          // Mostrar todos los productos relacionados con la subcategoría
+          console.log(subcategoria.products);
+        }
+        </script>
+        @foreach ($subcategoria->products as $producto)
+    <li>{{ $producto->name }}</li>
+    <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" @click="mostrarProductosDeSubcategoria($subcategoria)">{{ $subcategoria->name }} </a>
+@endforeach
+///////para vista productos////
+                      {{-- <div x-show="openCategory === '{{ $subcategoria->name }}'"  class="..."> --}}
+                        {{-- @foreach ($subcategoria->products as $producto) --}}
+                        {{-- <div x-show="openProduct === '{{ $producto->name }}';" x-init="abrirProducto()" ...>
+                            <button @click="openProduct === '{{ $producto->name }}' ? openCategory = null : openProduct = '{{ $producto->name }}'" class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"">{{ $producto->name }}</button> --}}
+                            {{-- <h3>{{ $producto->name }}</h3>
+                            <p>{{ $producto->description }}</p> 
+                            <p>Precio: ${{ $producto->price }}</p>
+                             <img src="{{ $producto->photo }}" alt="{{ $producto->name }}"> --}}
+                        {{-- </div> --}}
+                      {{-- @endforeach --}}
+                      {{-- </div> --}}
