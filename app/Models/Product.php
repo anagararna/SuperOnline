@@ -15,4 +15,9 @@ class Product extends Model
     {
         return $this->belongsTo(Subcategory::class);
     }
+    public function getImageUrlAttribute()
+    {
+        return route('productos.photo', ['id' => $this->id]);
+    }
+
 }

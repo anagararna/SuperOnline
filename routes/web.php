@@ -20,7 +20,10 @@ Route::get('/form', function () {
 
 Route::get('/dashboard',[HomeController::class, 'listadoDash'])->middleware(['auth', 'verified'])->name('dashboard')
 ->middleware(['auth', 'verified'])->name('dashboard');
-Route::delete('/dashboard.destroy/{id}', [HomeController::class,'destroy'])->name('dashboard.destroy');
+
+Route::delete('/productos/{id}', [HomeController::class,'destroy'])->name('productos.destroy');
+Route::post('/dashboard', [HomeController::class, 'store'])->name('dashboard');
+Route::get('/productos/{id}/photo', [HomeController::class, 'photo'])->name('productos.photo');
 
 
 Route::middleware('auth')->group(function () {

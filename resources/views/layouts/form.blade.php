@@ -1,4 +1,5 @@
 <!-- component -->
+<title>formulario</title>
 @vite (['resources/js/app.js','resources/css/app.css'])
 
     @include('layouts.dashmenu')
@@ -6,30 +7,45 @@
         <div class="h-16 flex items-center">
             <h4 class="text-lg font-bold">Nuevo producto</h4>
         </div>
+        <form class="form-items" method="POST" action="{{ url('dashboard') }}" enctype="multipart/form-data">
+            @csrf
         <div class="mb-6 pt-4">
+            
             <div>
-                <input type="text" name="to" id="to" class="w-full text-gray-700 py-1 border-b border-b-gray-300 focus:outline-none focus:ring-0 focus:border-transparent focus:border-b-gray-300" placeholder="Nombre">
+                <input type="text" name="name" id="nombre" class="w-full text-gray-700 py-1 border-b border-b-gray-300 focus:outline-none focus:ring-0 focus:border-transparent focus:border-b-gray-300" placeholder="Nombre" required>
             </div>
             <div>
-                <input type="text" name="cc" id="cc" class="w-full text-gray-700 py-1 border-b border-b-gray-300 focus:outline-none focus:ring-0 focus:border-transparent focus:border-b-gray-300" placeholder="Descripción">
+                <input type="text" name="description" id="descripcion" class="w-full text-gray-700 py-1 border-b border-b-gray-300 focus:outline-none focus:ring-0 focus:border-transparent focus:border-b-gray-300" placeholder="Descripción" required>
             </div>
             <div>
-                <input type="text" name="bcc" id="bcc" class="w-full text-gray-700 py-1 border-b border-b-gray-300 focus:outline-none focus:ring-0 focus:border-transparent focus:border-b-gray-300" placeholder="Subcategoria">
+                <input type="text" name="price" id="precio" class="w-full text-gray-700 py-1 border-b border-b-gray-300 focus:outline-none focus:ring-0 focus:border-transparent focus:border-b-gray-300" placeholder="Precio" required>
             </div>
+
             <div>
-                <input type="text" name="bcc" id="bcc" class="w-full text-gray-700 py-1 border-b border-b-gray-300 focus:outline-none focus:ring-0 focus:border-transparent focus:border-b-gray-300" placeholder="Imagen">
+                <input type="text" class="form-control" name="photo" id="imagenurl" class="w-full text-gray-700 py-1 border-b border-b-gray-300 focus:outline-none focus:ring-0 focus:border-transparent focus:border-b-gray-300" placeholder="Imagen" required>
+            </div>
+
+            {{-- <div>
+                <select name="subcategoria_id" id="subcategoria_id" class="w-full text-gray-700 py-1 border-b border-b-gray-300 focus:outline-none focus:ring-0 focus:border-transparent focus:border-b-gray-300">
+                    <option value="" disabled selected>Selecciona una subcategoría</option>
+                    @foreach($subcategories as $subcategoria)
+                        <option value="{{ $subcategories->id }}">{{ $subcategories->nombre }}</option>
+                    @endforeach
+                </select>
+            </div> --}}
+            
+
+            <div>
+                <input type="text" name="subcategory_id" id="subid" class="w-full text-gray-700 py-1 border-b border-b-gray-300 focus:outline-none focus:ring-0 focus:border-transparent focus:border-b-gray-300" placeholder="subcategoria" required>
             </div>
 
             <div class="flex items-center justify-between mt-4">
                 <div class="flex items-center space-x-2">
-                    <button class="bg-blue-500 hover:bg-blue-700 rounded-lg px-12 py-1.5 text-gray-100 hover:shadow-xl transition duration-150">Send</button>
+                    <button type="submit" class="bg-00c6bb hover:bg-fbd800 rounded-lg px-12 py-1.5 text-gray-100 hover:shadow-xl transition duration-150">Send</button>
                 </div>
-                <button class="mr-4 text-gray-700 hover:text-gray-900" title="Delete">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
-                    </svg>
-                </button>
             </div>
         </div>
+        </form>
+
     </div>
 </div>
