@@ -25,6 +25,14 @@ Route::delete('/productos/{id}', [HomeController::class,'destroy'])->name('produ
 Route::post('/dashboard', [HomeController::class, 'store'])->name('dashboard');
 Route::get('/productos/{id}/photo', [HomeController::class, 'photo'])->name('productos.photo');
 
+Route::get('/sobre', function () {
+    return view('sobre');
+});
+Route::get('/coop', function () {
+    return view('coop');
+});
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
