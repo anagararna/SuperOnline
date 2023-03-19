@@ -12,12 +12,19 @@ Route::get('/', function () {
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/productList', [HomeController::class, 'productList'])->name('productList');
 
+Route::get('/form', function () {
+    return view('layouts.form')->with('layout', 'form');
+})->name('form');
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard',[HomeController::class, 'listadoDash'])->middleware(['auth', 'verified'])->name('dashboard')
+->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::delete('/productos/{id}', [HomeController::class,'destroy'])->name('productos.destroy');
+Route::post('/dashboard', [HomeController::class, 'store'])->name('dashboard');
+Route::get('/productos/{id}/photo', [HomeController::class, 'photo'])->name('productos.photo');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
