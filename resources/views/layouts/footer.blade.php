@@ -5,9 +5,9 @@
             <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
                 <div class="w-full space-x-12 flex justify-center text-gray-700 sm:w-7/12 md:justify-start">
                     <ul class="list-disc list-inside space-y-8">
-                        <li><a href="#" class="hover:text-00c6bb transition">Inicio</a></li>
-                        <li><a href="#" class="hover:text-00c6bb transition">Sobre nosotros</a></li>
-                        <li><a href="#" class="hover:text-00c6bb transition">Contact</a></li>
+                        <li><a href="/" class="hover:text-00c6bb transition">Inicio</a></li>
+                        <li><a href="/sobre" class="hover:text-00c6bb transition">Sobre nosotros</a></li>
+                        <li><a href="/coop" class="hover:text-00c6bb transition">Espacio coop</a></li>
                         <li><a href="#" class="hover:text-00c6bb transition">Terms of Use</a></li>
                     </ul>
 

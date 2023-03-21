@@ -90,5 +90,8 @@
         </div>
         </div>
     </div>
+    <footer>   
+        @include('layouts.footer')
+     </footer>  
 </body>
 </html>
